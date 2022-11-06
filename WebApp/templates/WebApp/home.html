@@ -1,0 +1,62 @@
+{% extends 'WebApp/common/base.html' %}
+{% block title %} Home {% endblock %}
+
+{% load static %}
+{% block content %}
+
+<div class="container-fluid p-0 text-center fs-2 bg-primary-light justify-content-center align-items-center">
+
+    <div class="row w-100 p-0 m-0 pb-5 h-auto home-hero">
+        <div class="row mt-3 pb-5 align-items-center">
+            
+            <figure class="col-12 col-md-4">
+                    <img class="w-75" src="{% static 'WebApp/img/atlantox3-squared.png' %}" alt="">
+            </figure>
+            
+            <div class="col-12 col-md-8 text-secondary-light">
+                <h1 class="text-shadow-h text-giant" >Soy Atlantox</h1>
+                <p class="fs-1">
+                    Excelente programador y apasionado desarrollador de videojuegos que ama lo que hace. Mi sueño es crear historias memorables y emocionantes.
+                </p>
+                <span class="fst-italic fs-3 text-shadow-l">« Si puedes imaginarlo, puedes programarlo »</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row w-100 m-0 py-5 h-auto home-about mt-5 shadow-top">
+            <div class="col-12 py-5 col-md-6 text-secondary-light m-0 p-0">
+                <h2 class="text-giant m-0 text-shadow-h">Ven a conocerme</h2>
+                <p class="text-secondary">
+                    Porque si estás aquí, seguramente tengamos algo en común.
+                </p>            
+        </div>
+    </div>
+    <div class="row w-100 m-0 py-5 home-projects shadow-top">
+        <div class="col-12 text-secondary-light">
+            <h2 class="text-giant m-0 text-shadow-h">Deleitate con mis proyectos</h2>
+            <p class="text-secondary">
+                Disfrútalos, sácales provecho y explora.
+            </p>
+        </div>
+    </div>
+
+    <div class="row w-100 m-0 py-5 text-end shadow-top">
+        <div class="col-12 text-secondary-light">
+            <h2 class="text-giant m-0 text-shadow-h">¿Te interesa mi trabajo?</h2>
+            <p class="text-secondary">
+                ¿Por qué no me contactas y lo hablamos?
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .subtitle{
+        display:none;
+    }
+</style>
+    
+
+{% endblock %}
