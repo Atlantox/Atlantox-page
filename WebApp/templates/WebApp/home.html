@@ -4,18 +4,22 @@
 {% load static %}
 {% block content %}
 
-<div class="container-fluid p-0 text-center fs-2 bg-primary-light justify-content-center align-items-center">
+<div class="container-fluid p-0 text-center fs-2 bg-primary-light justify-content-center h-100" style="overflow:hidden;">
 
-    <div class="row w-100 p-0 m-0 pb-5 h-auto home-hero">
-        <div class="row mt-3 pb-5 align-items-center">
+    <div class="row w-100 p-0 m-0 pb-5 h-auto home-hero justify-content-center">
+        <div class="row mt-3 w-100 pb-5 align-items-center m-0 p-0 justify-content-center" style="transform:rotate(-2deg) translateY(40px) scaleX(0.9);">
             
-            <figure class="col-12 col-md-4">
-                    <img class="w-75" src="{% static 'WebApp/img/atlantox3-squared.png' %}" alt="">
-            </figure>
+            <div class="col-12 col-md-4 row justify-content-center align-items-center">
+                <div class="w-100 m-0 p-0">
+                    <div class="w-100 pentagon bg-secondary border-0 border-bottom-5 border-secondary pb-1">
+                        <img class="w-75 pentagon" src="{% static 'WebApp/img/atlantox3.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
             
-            <div class="col-12 col-md-8 text-secondary-light">
+            <div class="col-12 col-md-8 text-secondary-light d-flex flex-column justify-content-center align-items-center">
                 <h1 class="text-shadow-h text-giant" >Soy Atlantox</h1>
-                <p class="fs-1">
+                <p class="fs-1 text-shadow-n text-center">
                     Excelente programador y apasionado desarrollador de videojuegos que ama lo que hace. Mi sueño es crear historias memorables y emocionantes.
                 </p>
                 <span class="fst-italic fs-3 text-shadow-l">« Si puedes imaginarlo, puedes programarlo »</span>
@@ -24,16 +28,26 @@
     </div>
 
 
-    <div class="row w-100 m-0 py-5 h-auto home-about mt-5 shadow-top">
-            <div class="col-12 py-5 col-md-6 text-secondary-light m-0 p-0">
+    <div class="row w-100 m-0 py-5 h-auto home-about shadow-top top-bordered justify-content-center align-items-center">
+        <div class="row w-100 justify-content-center align-items-center py-5" style="transform:rotate(-2deg) scaleX(0.9);">
+            <div class="col-12 col-md-4 p-0">
+                <div class="w-100">
+                    <img class="w-75 m-0 my-auto pentagon text-center" src="{% static 'WebApp/img/atlantox3.png' %}" alt="">
+                </div>
+            </div>
+            
+            <div class="col-12 py-5 col-md-8 text-secondary-light m-0 p-0 d-flex flex-column justify-content-center align-items-center">
                 <h2 class="text-giant m-0 text-shadow-h">Ven a conocerme</h2>
                 <p class="text-secondary">
                     Porque si estás aquí, seguramente tengamos algo en común.
                 </p>            
+            </div>
         </div>
     </div>
-    <div class="row w-100 m-0 py-5 home-projects shadow-top">
-        <div class="col-12 text-secondary-light">
+
+
+    <div class="row w-100 m-0 py-5 home-projects shadow-top top-bordered">
+        <div class="col-12 text-secondary-light" style="transform:rotate(2deg) scaleX(0.9);">
             <h2 class="text-giant m-0 text-shadow-h">Deleitate con mis proyectos</h2>
             <p class="text-secondary">
                 Disfrútalos, sácales provecho y explora.
@@ -41,14 +55,17 @@
         </div>
     </div>
 
-    <div class="row w-100 m-0 py-5 text-end shadow-top">
-        <div class="col-12 text-secondary-light">
+    
+    <div class="row w-100 m-0 py-5 text-end shadow-top home-contact">
+        <div class="col-12 text-secondary-light" style="transform:scaleY(0.45);">
             <h2 class="text-giant m-0 text-shadow-h">¿Te interesa mi trabajo?</h2>
             <p class="text-secondary">
                 ¿Por qué no me contactas y lo hablamos?
             </p>
         </div>
     </div>
+</div>
+
 
 </div>
 
@@ -56,7 +73,9 @@
     .subtitle{
         display:none;
     }
+
 </style>
     
+
 
 {% endblock %}
