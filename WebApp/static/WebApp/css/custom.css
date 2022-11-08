@@ -42,6 +42,14 @@ nav{
     transform:scaleY(1.88) translateY(-15px);
 }
 
+.project-card{
+    clip-path: polygon(100% 50%, 96% 94%, 50% 100%, 5% 94%, 0 50%, 4% 5%, 50% 0, 96% 5%);
+}
+
+.angular-button{
+    clip-path: polygon(100% 50%, 89% 101%, 10% 101%, 0% 50%, 10% 0%, 89% 0%);
+}
+
 .bg-image{
     background-size: contain;
     background-repeat: no-repeat;
@@ -75,6 +83,10 @@ nav{
     text-shadow: 2px 5px black !important;
 }
 
+.text-shadow-x{
+    text-shadow: none;
+}
+
 .underline-hover:hover{
     text-decoration: underline !important;
 }
@@ -101,6 +113,15 @@ nav{
         max-height:500px;
         max-width:500px;
     }   
+}
+
+@media(max-width:990px){
+    .contact-icon{
+        width:25% !important;
+    }
+    .home-icon{
+        width:50% !important;
+    }
 }
 
 .bar-animated{
