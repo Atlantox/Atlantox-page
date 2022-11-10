@@ -10,17 +10,38 @@ nav{
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
 
+/* Gradient primary color: light to normal */
+.gradient-p-l-n{
+    background: linear-gradient(0deg, rgba(135,9,180,1) 20%, rgba(165,71,199,1) 80%);
+}
+
+/* Gradient primary color: normal to dark */
+.gradient-p-n-d{
+    background: linear-gradient(0deg, rgba(118,8,158,1) 20%, rgba(135,9,180,1) 80%);
+}
+
+/* Gradient primary color: datk to normal */
+.gradient-p-d-n{
+    background: linear-gradient(0deg, rgba(135,9,180,1) 20%,rgba(118,8,158,1) 80%);
+}
+
+/* Gradient primary color: normal to light */
+.gradient-p-n-l{
+    background: linear-gradient(0deg, rgba(165,81,189,1) 20%, rgba(135,9,180,1) 80%);
+}
+
+/* Gradient primary color: normal to light */
+.gradient-p-l-d-l{
+    background: linear-gradient(0deg, rgba(165,81,189,1) 0%, rgba(118,8,158,1) 50%, rgba(165,81,189,1) 100%);
+}
+
 .home-hero{
     z-index: 9;
-    background: rgb(135,9,180);
-    background: linear-gradient(0deg, rgba(135,9,180,1) 20%, rgba(165,71,199,1) 80%);
     transform: translateY(-20px) rotate(2deg) scaleX(1.1);
 }
 
 .home-about{
     z-index: 8;
-    background: rgb(118,8,158);
-    background: linear-gradient(0deg, rgba(118,8,158,1) 20%, rgba(135,9,180,1) 80%);
     transform: translateY(-20px) rotate(2deg) scaleX(1.1);
 }
 
@@ -29,21 +50,60 @@ nav{
 }
 
 .home-projects{
-    z-index:7;
-    background: rgb(118,8,158);
-    background: linear-gradient(0deg, rgba(135,9,180,1) 20%,rgba(118,8,158,1) 80%);
+    z-index:7;    
     transform:translateY(-100px) rotate(-2deg) scaleX(1.1);
 }
 
 .home-contact{
     z-index:6;
-    background: rgb(165,81,189);
-    background: linear-gradient(0deg, rgba(165,81,189,1) 20%, rgba(135,9,180,1) 80%);
     transform:scaleY(1.88) translateY(-15px);
 }
 
 .project-card{
     clip-path: polygon(100% 50%, 96% 94%, 50% 100%, 5% 94%, 0 50%, 4% 5%, 50% 0, 96% 5%);
+}
+
+.project-bigcard{
+    clip-path:polygon(
+        94% 0.2%,
+        90% 10%,
+        99.9% 6%,
+
+        97% 50%,
+
+        99.9% 94%,
+        90% 90%,
+        94% 99.9%,
+
+        50% 97%,
+
+        6% 99.9%,
+        10% 90%,
+        0% 94%,
+
+        3% 50%,
+
+        0% 6%,
+        10% 10%,
+        6% 0.2%,
+
+        50% 3%
+    );
+}
+
+.category-list-container{
+    background: linear-gradient(90deg, rgba(0,0,0,0.15) 90%, rgba(255,255,255,0) 100%);
+    clip-path: polygon(103% 50%, 31% 99%, 0% 96%, 0% 100%, 0% 4%, 31% 1%);
+    transform: scaleY(1.2);
+}
+
+.category-list{
+    background: linear-gradient(90deg, rgba(135, 9, 180,1) 10%, rgba(165,71,199,1) 95%);
+    clip-path: polygon(100% 50%, 30% 98%, 0% 95%, 0% 100%, 0% 5%, 30% 2%);
+}
+
+.projects-container{
+    box-shadow: inset 220px 0px 160px -80px black;
 }
 
 .angular-button{
@@ -64,12 +124,17 @@ nav{
 }
 
 .shadowed{
-    box-shadow: 0 0 20px rgb(0 0 0 / 100%);
+    box-shadow: 0 0 20px 3px rgb(0 0 0 / 100%);
 }
 
 .shadow-top{
     box-shadow: inset 0 15px 17px -10px #000000;
 }
+
+.shadow-inset{
+    box-shadow:inset 0 0 50px 0px black;
+}
+
 
 .text-shadow-l{
     text-shadow: 2px 2px black !important; 

@@ -1,0 +1,7 @@
+<ul class="list-unstyled py-5 ps-2 text-start m-0" style="transform:scaleY(0.8)">
+    {% for category in categories %}
+    <li class="fs-5 my-2">
+        <a class="text-decoration-none text-secondary" href="{% url 'Category' category.id %}">{{category.name}}</a>
+    </li>
+    {% endfor %}
+</ul>
