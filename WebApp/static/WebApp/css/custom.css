@@ -97,6 +97,10 @@ nav{
     transform: scaleY(1.2);
 }
 
+.category-ul{
+    transform:scaleY(0.8);
+}
+
 .category-list{
     background: linear-gradient(90deg, rgba(135, 9, 180,1) 10%, rgba(165,71,199,1) 95%);
     clip-path: polygon(100% 50%, 30% 98%, 0% 95%, 0% 100%, 0% 5%, 30% 2%);
@@ -180,12 +184,32 @@ nav{
     }   
 }
 
-@media(max-width:990px){
+@media(max-width:991px){
     .contact-icon{
         width:25% !important;
     }
+
     .home-icon{
         width:50% !important;
+    }
+    
+    .category-list-container{
+        background: linear-gradient(90deg, rgba(0,0,0,0.15) 90%, rgba(255,255,255,0) 100%);
+        clip-path: polygon(50% 0%, 99% 70%, 96% 100%, 4% 100%, 1% 70%);
+        transform: scaleY(1);
+    }
+    
+    .category-list{
+        background: linear-gradient(180deg, rgba(135, 9, 180,1) 10%, rgba(165,71,199,1) 95%);
+        clip-path: polygon(50% 0%, 98% 70%, 95% 100%, 5% 100%, 2% 70%);
+    }
+
+    .category-ul{
+        transform:scaleY(1);
+    }
+    
+    .projects-container{
+        box-shadow: inset 0px -220px 300px -80px black;
     }
 }
 

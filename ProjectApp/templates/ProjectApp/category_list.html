@@ -1,7 +1,7 @@
-<ul class="list-unstyled py-5 ps-2 text-start m-0" style="transform:scaleY(0.8)">
+<ul class="list-unstyled py-5 pb-2 pb-lg-5 m-4 m-lg-0 px-5 px-lg-0 text-center text-lg-start m-0 category-ul d-flex flex-row flex-lg-column justify-content-center h-100 w-100 flex-wrap">
     {% for category in categories %}
-    <li class="fs-5 my-2">
-        <a class="text-decoration-none text-secondary" href="{% url 'Category' category.id %}">{{category.name}}</a>
+    <li class="fs-4 my-2 mx-2 mx-lg-0">
+        <a class="text-decoration-none text-secondary-light" href="{% url 'Category' category.id %}">{{category.name}}</a>
     </li>
     {% endfor %}
-</ul>
+</ul>  
