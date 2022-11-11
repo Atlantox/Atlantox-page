@@ -11,7 +11,7 @@
             
             <div class="col-12 col-lg-4 row justify-content-center align-items-center">
                 <div class="w-100 m-0 p-0 home-icon">
-                    <div class="w-100 pentagon bg-secondary border-0 border-bottom-5 border-secondary pb-1">
+                    <div class="w-100 pentagon bg-secondary-light border-0 border-bottom-5 border-secondary pb-1 shadow-deep">
                         <img class="w-75 pentagon" src="{% static 'WebApp/img/atlantox3.png' %}" alt="">
                     </div>
                 </div>
@@ -47,7 +47,7 @@
 
 
     <div class="row w-100 m-0 py-5 home-projects gradient-p-d-n shadow-top top-bordered justify-content-center">
-        <div class="row w-100 text-secondary-light justify-content-center pb-5 pb-md-0" style="transform:rotate(2deg) scaleX(0.9);">
+        <div class="row w-100 text-secondary-light justify-content-center pb-5 pb-md-0" style="transform:rotate(2deg) scaleX(0.7);">
             <div class="col-12 text-secondary-light">
                 <h2 class="text-giant m-0 text-shadow-h">Deleitate con mis proyectos</h2>
                 <p class="text-secondary">
@@ -55,64 +55,33 @@
                 </p>
             </div>
 
+            
             <div class="col-12 row px-4 justify-content-center m-0">
-                <article class="col-11 col-lg-4 p-4 m-0">
-                    <div class="w-100 bg-secondary p-0 shadowed my-2">
-                        <a class="w-100 h-auto text-decoration-none" href="#">
-                            <div class="w-100 row bg-primary-light shadowed m-0 project-card p-4 shadow-inset">
-                                <figure class="col-12">
-                                    <img class="w-100" src="{% static 'WebApp/img/logoPC.png' %}" alt="">
-                                </figure>
-                                <h3 class="col-12 text-secondary-light shadow-h fs-1">
-                                    Tales of Venslla
-                                </h3>
-                                <p class="col-12 text-secondary shadow-n fs-4">
-                                    Videojuego novela visual
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </article>
+                
+                {% for project in projects %}
+                    <article class="col-11 col-lg-6 p-4 p-lg-5 m-0">
+                        <div class="w-100 h-100 bg-secondary p-0 shadowed my-2">
+                            <a class="w-100 h-100 text-decoration-none" href="{% url 'Project' project.id %}">
+                                <div class="w-100 h-100 row bg-primary-light shadowed m-0 project-card p-4 shadow-inset">
+                                    <figure class="col-12">
+                                        <img class="w-100" src="{{project.img.url}}" alt="{{project.name}}">
+                                    </figure>
+                                    <h3 class="col-12 text-secondary-light shadow-h fs-1">
+                                        {{project.name}}
+                                    </h3>
+                                    <p class="col-12 text-secondary shadow-n fs-4">
+                                       {{project.content}}
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </article>
+                {% endfor %}
 
-                <article class="col-11 col-lg-4 p-4 m-0">
-                    <div class="w-100 bg-secondary p-0 shadowed my-2">
-                        <a class="w-100 h-auto text-decoration-none" href="#">
-                            <div class="w-100 row bg-primary-light shadowed m-0 project-card p-4 shadow-inset">
-                                <figure class="col-12">
-                                    <img class="w-100" src="{% static 'WebApp/img/logoPC.png' %}" alt="">
-                                </figure>
-                                <h3 class="col-12 text-secondary-light shadow-h fs-1">
-                                    Tales of Venslla
-                                </h3>
-                                <p class="col-12 text-secondary shadow-n fs-4">
-                                    Videojuego novela visual
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="col-11 col-lg-4 p-4 m-0">
-                    <div class="w-100 bg-secondary p-0 shadowed my-2">
-                        <a class="w-100 h-auto text-decoration-none" href="#">
-                            <div class="w-100 row bg-primary-light shadowed m-0 project-card p-4 shadow-inset">
-                                <figure class="col-12">
-                                    <img class="w-100" src="{% static 'WebApp/img/logoPC.png' %}" alt="">
-                                </figure>
-                                <h3 class="col-12 text-secondary-light shadow-h fs-1">
-                                    Tales of Venslla
-                                </h3>
-                                <p class="col-12 text-secondary shadow-n fs-4">
-                                    Videojuego novela visual
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </article>
             </div>
 
             <div class="col-10 col-md-6 col-lg-3 my-5 pb-5 pb-md-0">
-                <a class="text-decoration-none text-primary-dark" href="#">
+                <a class="text-decoration-none text-primary-dark" href="{% url 'Projects' %}">
                     <div class="w-100 h-auto pb-5 pb-md-0">
                         <div class="w-100 bg-secondary-light angular-button text-shadow-x" style="box-shadow:inset 0 0 15px 1px black">
                             Ver más

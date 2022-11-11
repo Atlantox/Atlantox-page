@@ -1,0 +1,70 @@
+{% extends 'WebApp/common/base.html' %}
+
+{% block title %} {{project.name}} {% endblock %}
+{% block subtitle %} {{project.name}} {% endblock %}
+
+{% block content %}
+    <div class="container-fluid gradient-p-n-d fs-4 project-container">
+        <div class="row w-100 justify-content-center p-0 m-0 pt-5">
+            <div class="col-12 row justify-content-center w-100 p-0 m-0">
+                <div class="col-10 bg-secondary p-1 project-big-img-container">
+                    <figure class="text-center m-0 bg-primary-light project-big-img p-1 p-md-5">
+                        <img class="w-100 p-5 m-0" src="{{project.img.url}}" alt="">
+                    </figure>
+                </div>
+
+                <div class="col-7 mt-5">
+                    <ul class="project-category bg-secondary-light p-3 py-4 list-unstyled d-flex justify-content-evenly fs-3 flex-wrap align-items-center">
+                        {% for category in project.category.all %}
+                        <li>
+                            <a class="underline-hover text-decoration-none text-primary text-shadow-x" href="{% url 'Category' category.id %}">
+                                {{category}}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-10 px-5 project-content shadow-deep bg-primary-light text-secondary mt-2 mb-5">
+                    <p class="fs-3 p-5 px-0 px-lg-5 text-shadow-l">
+                        {{project.content}}
+                    </p>
+                </div>
+
+                
+                <div class="col-12 row justify-content-center mb-5">
+                    <div class="col-10 col-lg-3 text-center">
+                        <a class="text-decoration-none text-primary-dark" target="_blank" href="{{project.link}}">
+                            <div class="w-100 h-auto pb-5 pb-md-0">
+                                <div class="w-100 bg-secondary-light angular-button text-shadow-x py-2" style="box-shadow:inset 0 0 15px 1px black">
+                                    Ver proyecto
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 justify-content-center mt-5">
+                <div class="project-category-list-container w-100 h-100 project-category-list pt-5">
+                    <ul class="list-unstyled d-flex justify-content-center align-items-center flex-wrap p-5">
+                        {% for category in categories %}
+                            <li class="mx-2">
+                                <a class="underline-hover text-decoration-none text-secondary-light" href="{% url 'Category' category.id %}">
+                                    {{category}}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        .subtitle{
+            display:none;
+        }
+    </style>
+{% endblock %}

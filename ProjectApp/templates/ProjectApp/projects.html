@@ -4,54 +4,5 @@
 {% block subtitle %} Mis proyectos {% endblock %}
 
 {% block content %}
-
-    <div class="container-fluid bg-primary w-100 p-0 m-0 pb-0 pb-lg-5">
-        <div class="container-fluid bg-primary p-0 w-100 h-100 shadowed m-0 mb-0 mb-lg-5">
-            <div class="row text-center text-shadow-n projects-container justify-content-between align-items-center align-items-lg-stretch m-0 flex-column-reverse flex-lg-row w-100 p-0">
-
-                <div class="col-12 col-lg-2 m-0 p-0 align-items-center py-0 py-lg-2">
-                    <div class="w-100 h-100 category-list-container">
-                        <div class="w-100 h-100 category-list d-flex align-items-center bg-primary-light ps-1">
-                            {% include 'ProjectApp/category_list.html' %}
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-10 p-0 row justify-content-center m-0">
-
-                    {% for project in projects %}
-                    <article class="col-11 col-lg-5 p-0 text-center text-secondary-light my-4 p-4">
-                        <div class="row w-100 bg-secondary shadowed justify-content-center h-100 m-0 p-1">
-                            <div class="row w-100 bg-primary-light project-bigcard m-0 shadow-inset justify-content-center align-items-center p-3">
-                                <figure class="col-10 text-center mt-2 px-5">
-                                    <a class="m-0 p-0" href="{url 'Project' project.id}">
-                                        <img class="w-100" src="{{project.img.url}}" alt="{{project.name}}">
-                                    </a>
-                                </figure>
-                                <div class="col-10 m-0 p-0 text-shadow-n">
-                                    <p class="w-100 fs-4">
-                                        {{project.content}}
-                                    </p>
-                                </div>
-                                <div class="col-10 m-0 p-0">
-                                    <ul class="list-unstyled d-flex justify-content-center align-items-center" class="w-100">
-                                        {% for category in project.category.all %}
-                                            <li class="fs-5">
-                                                <a class="text-decoration-none text-secondary-light" href="{% url 'Category' category.id %}">
-                                                    {{category}} &nbsp;
-                                                </a>
-                                            </li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    {% endfor %}
-
-                </div>
-            </div>
-        </div>
-    </div>
-
+    {% include 'ProjectApp/base.html' %}
 {% endblock %}

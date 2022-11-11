@@ -2,7 +2,7 @@
     {% load static %}
     <div class="container-fluid bg-primary-dark shadowed">
       <a class="navbar-brand" href="{% url 'Home' %}">
-        <img src="#" alt="logo" width="125px">
+        <img src="{% static 'WebApp/icons/atlantox-icon.svg' %}" alt="logo" width="125px">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -11,23 +11,37 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 h5 pe-3 fw-semibold fs-3">
 
           <li class="nav-item mx-1">
-            <a class="nav-link text-secondary-light fw-normal" href="{% url 'Projects' %}">Proyectos</a>
+            <a class="underline-hover nav-link text-secondary-light fw-normal" href="{% url 'Projects' %}">
+              Proyectos
+
+            </a>
           </li>
 
           <li class="nav-item mx-1">
-            <a class="nav-link text-secondary-light fw-normal" href="#">Sobre mi</a>
+            <a class="underline-hover nav-link text-secondary-light fw-normal" href="#">
+              Sobre mi
+
+            </a>
           </li>
 
           <li class="nav-item mx-1">
-            <a class="nav-link text-secondary-light fw-normal" href="#">Portafolio</a>
+            <a class="underline-hover nav-link text-secondary-light fw-normal" href="#">
+              Portafolio
+
+            </a>
           </li>
 
           <li class="nav-item mx-1">
-            <a class="nav-link text-secondary-light fw-normal" href="#">Galería</a>
+            <a class="underline-hover nav-link text-secondary-light fw-normal" href="#"
+            >Galería
+
+            </a>
           </li>
 
           <li class="nav-item mx-1">
-            <a class="nav-link text-secondary-light fw-normal" href="#">Contacto</a>
+            <a class="underline-hover nav-link text-secondary-light fw-normal" href="#">
+              Contacto
+            </a>
           </li>
         </ul>
       </div>

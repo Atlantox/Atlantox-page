@@ -6,6 +6,11 @@ nav{
     z-index:10;
 }
 
+.navbar-toggler-icon{
+    width:60px;
+    height:60px;
+}
+
 .pentagon{
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
@@ -31,8 +36,8 @@ nav{
 }
 
 /* Gradient primary color: normal to light */
-.gradient-p-l-d-l{
-    background: linear-gradient(0deg, rgba(165,81,189,1) 0%, rgba(118,8,158,1) 50%, rgba(165,81,189,1) 100%);
+.gradient-p-l-d{
+    background: linear-gradient(0deg, rgba(165,81,189,1) 20%, rgba(135,9,180,1) 80%);
 }
 
 .home-hero{
@@ -51,7 +56,7 @@ nav{
 
 .home-projects{
     z-index:7;    
-    transform:translateY(-100px) rotate(-2deg) scaleX(1.1);
+    transform:translateY(-100px) rotate(-2deg) scaleX(1.3);
 }
 
 .home-contact{
@@ -91,6 +96,55 @@ nav{
     );
 }
 
+.project-big-img{
+    clip-path: polygon(
+        50% 0%,
+
+        100% 8%,
+        95% 15%,
+
+        95% 85%,
+        100% 92%,
+
+        50% 100%,
+
+        0% 92%,
+        5% 85%,
+
+        5% 15%,
+        0% 8%
+        );
+
+    box-shadow: inset 0 0 100px 30px black;
+    z-index:0;
+}
+
+.project-big-img-container{
+    clip-path: polygon(
+        50% 0%,
+
+        100% 8%,
+
+        95% 50%,
+
+
+        100% 92%,
+
+        50% 100%,
+
+        0% 92%,
+
+        5% 50%,
+
+        0% 8%
+        );   
+    box-shadow: inset 0 0 50px 5px black;
+}
+
+.project-content{
+    clip-path: polygon(100% 50%, 89% 101%, 10% 101%, 0% 50%, 10% 0%, 89% 0%);
+}
+
 .category-list-container{
     background: linear-gradient(90deg, rgba(0,0,0,0.15) 90%, rgba(255,255,255,0) 100%);
     clip-path: polygon(103% 50%, 31% 99%, 0% 96%, 0% 100%, 0% 4%, 31% 1%);
@@ -108,6 +162,32 @@ nav{
 
 .projects-container{
     box-shadow: inset 220px 0px 160px -80px black;
+}
+
+.project-container{
+    box-shadow: inset 0px -400px 500px -300px black;
+}
+
+.project-category{
+    clip-path: polygon(
+        50% 0%,
+        100% 20%,
+        100% 79%,
+        50% 100%,
+        0% 79%,
+        0% 20%
+        );
+    box-shadow: inset 0 0 30px 5px black;
+}
+
+.project-category-list-container{
+    background: linear-gradient(90deg, rgba(0,0,0,0.15) 90%, rgba(255,255,255,0) 100%);
+    clip-path: polygon(50% 0%, 99% 70%, 96% 100%, 4% 100%, 1% 70%);
+}
+
+.project-category-list{
+    background: linear-gradient(180deg, rgba(135, 9, 180,1) 10%, rgba(165,71,199,1) 95%);
+    clip-path: polygon(50% 0%, 98% 70%, 95% 100%, 5% 100%, 2% 70%);
 }
 
 .angular-button{
@@ -156,8 +236,12 @@ nav{
     text-shadow: none;
 }
 
+.shadow-deep{
+    box-shadow: inset 0 0 50px 5px black;
+}
+
 .underline-hover:hover{
-    text-decoration: underline !important;
+    text-decoration: underline  !important;
 }
 
 .strong-hover:hover{
@@ -209,7 +293,12 @@ nav{
     }
     
     .projects-container{
-        box-shadow: inset 0px -220px 300px -80px black;
+        box-shadow: inset 0px -400px 500px -300px black;
+    }
+
+    .project-content{
+        clip-path: polygon(50% 0%, 100% 7%, 100% 93%, 50% 100%, 0% 93%, 0% 7%);
+        box-shadow: inset 0 0 50px 5px black;
     }
 }
 
@@ -260,6 +349,6 @@ nav{
     background-color: rgba(229,215,187,0.3);
 }
 
-.dropdown{
-    transition:1s;
+.footer-nav li{
+    margin: 5px 0;
 }

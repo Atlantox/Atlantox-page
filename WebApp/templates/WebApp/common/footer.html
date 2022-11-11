@@ -1,21 +1,22 @@
-<footer class="w-100 bg-primary-dark p-4 py-5 mt-0 shadowed" style="box-shadow:inset 0px 10px 20px -5px rgb(0 0 0); z-index:7;">
+<footer class="w-100 bg-primary-dark p-4 py-2 mt-0 shadowed" style="box-shadow:inset 0px 10px 20px -5px rgb(0 0 0); z-index:7;">
     {#  load bootstrap_icons #}
     {% load static %}
     <div class="container-fluid">
-      <div class="row">
+      <div class="row flex-column flex-lg-row align-items-center">
+
         <div class="col-12 col-lg-2 text-center mb-4 mb-lg-0">
-          <img class="" src="#" alt="logo" width="150px">
+          <img class="" src="{% static 'WebApp/icons/atlantox-icon.svg' %}" alt="logo" width="150px">
         </div>
 
-        <div class="col-12 col-md-6 col-lg-5 text-secondary">
-          <ul class="list-unstyled h6 d-flex justify-content-center flex-column h-100">
+        <div class="col-12 col-md-6 col-lg-5 text-secondary justify-content-center">
+          <ul class="list-unstyled h6 d-flex justify-content-center flex-column h-100 align-items-center">
             <li>Made in 
-              <a target="blank" class="text-decoration-none text-black fw-semibold" href="https://www.djangoproject.com/">
+              <a target="_blank" class="text-decoration-none text-black fw-semibold" href="https://www.djangoproject.com/">
               <span class="underline-hover text-secondary-light">Django</span>
             </a>
           </li>
             <li>By
-              <a target="blank" class="text-decoration-none text-black fw-semibold" href="https://twitter.com/atlantox7">
+              <a target="_blank" class="text-decoration-none text-black fw-semibold" href="https://twitter.com/atlantox7">
                 <span class="underline-hover text-secondary-light">Atlantox</span>
               </a>
             <!--- and <a href=""><span class="underline-hover">Other person</span></a> -->
@@ -27,17 +28,17 @@
           <h4 class="h4 m-0 p-0">Contacto</h4>
           <ul class="list-unstyled row w-100 p-0 m-0 my-2">
             <li class="col px-1 w-100">
-              <a class="w-100" target="blank" href="https://www.youtube.com/user/atlantox">
+              <a class="w-100" target="_blank" href="https://www.youtube.com/user/atlantox">
                 <img class="w-50" src="{% static 'webApp/icons/youtube.svg' %}" alt="youtube">
               </a>
             </li>
             <li class="col px-1 w-100">
-              <a class="w-100" target="blank" href="https://twitter.com/atlantox7">
+              <a class="w-100" target="_blank" href="https://twitter.com/atlantox7">
                 <img class="w-50" src="{% static 'webApp/icons/twitter.svg' %}" alt="twitter">
               </a>
             </li>
             <li class="col px-1 w-100">
-              <a class="w-100" target="blank" href="https://github.com/Atlantox">
+              <a class="w-100" target="_blank" href="https://github.com/Atlantox">
                 <img class="w-50" src="{% static 'webApp/icons/github.svg' %}" alt="twitter">
               </a>
             </li>
@@ -45,7 +46,7 @@
         </div>
 
         <div class="col-12 col-lg-2 d-none d-lg-flex text-end">
-          <ul class="list-unstyled h6 w-100">
+          <ul class="list-unstyled h6 w-100 footer-nav">
             <li>
               <a class="text-decoration-none text-black fw-semibold" href="{% url 'Home' %}">
                 <span class="underline-hover text-secondary">Inicio</span>
