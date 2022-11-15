@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('WebApp.urls')),
     path('', include('ProjectApp.urls')),
+    path('', include('BriefcaseApp.urls')),
 ]

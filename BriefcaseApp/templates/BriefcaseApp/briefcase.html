@@ -1,0 +1,74 @@
+{% extends 'WebApp/common/base.html' %}
+
+{% block title %} Portafolio {% endblock %}
+{% block subtitle %} Mi portafolio {% endblock %}
+
+{% block content %}
+    <div class="container-fluid text-secondary py-4 gradient-p-l-d">
+        <div class="row w-100 mb-5 justify-content-center p-0 m-0">
+            <div class="col-12 justify-content-center p-0">
+                <p class="h2 text-center w-100 p-0 px-5 mx-0">
+                    La siguiente es una lista de algunos de los conocimientos que poseo, la mayoría obtenidos por cursos realizados en la academia virtual
+                    <a class="text-decoration-none text-secondary fw-bold underline-hover" href="https://platzi.com/" target="_blank">Platzi</a>,
+                    la cual recomiendo encarecidamente y agradezco eternamente haberme dado la oportunidad de estudiar allí.
+                </p>
+            </div>
+        </div>
+
+        <div class="row w-100 justify-content-around text-primary h-auto m-0 p-0" style="overflow:hidden">
+
+            <div class="col-12 col-lg-6 row align-items-start justify-content-center m-0 align-self-start">
+                {% for briefcase in briefcases2 %}
+                    {% include 'BriefcaseApp/briefcase_card.html' %}
+                {% endfor %}
+            </div>
+
+            <div class="col-12 col-lg-6 row align-items-start justify-content-center m-0 align-self-start">
+                {% for briefcase in briefcases1 %}
+                    {% include 'BriefcaseApp/briefcase_card.html' %}
+                {% endfor %}
+            </div>
+
+        <div class="row w-100 m-0 mt-5 p-0 justify-content-center align-items-center">
+            <div class="col-10 text-secondary angular-button bg-secondary-light shadow-deep-l p-3 m-0">
+                <p class="text-center fs-3 text-primary text-shadow-x m-0">
+                    He realizado otros cursos, si deseas verlos todos puedes visitar mi perfil de Platzi 
+                    <a class="text-primary fw-bold underline-hover" href="https://platzi.com/p/atlantox/" target="_blank">Aquí</a>
+                </p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+
+        function hasClass(element, clsName) {
+            return (' ' + element.className + ' ').indexOf(' ' + clsName + ' ') > -1;
+        }
+    
+        function ToggleBriefcase(id){
+            briefcase = document.getElementById('brf-' + id);
+            //drop_container = document.getElementById('drop-container' + id);
+            if(hasClass(briefcase, 'hidden-briefcase')){
+                //drop_container.style.height = 'auto';
+                briefcase.classList.remove('hidden-briefcase');
+                briefcase.classList.add('visible-briefcase');
+            }
+            else{
+                //drop_container.style.height = '0%';
+                briefcase.classList.remove('visible-briefcase');
+                briefcase.classList.add('hidden-briefcase');
+            }
+    
+            arrow = document.getElementById('arrow' + id);
+            if(hasClass(arrow, 'arrow-up')){
+                arrow.classList.remove('arrow-up');
+                
+            }
+            else{
+                arrow.classList.add('arrow-up');
+            }
+    
+        }
+    </script>
+{% endblock %}
