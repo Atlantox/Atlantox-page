@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('WebApp.urls')),
     path('', include('ProjectApp.urls')),
     path('', include('BriefcaseApp.urls')),
+    path('', include('AboutApp.urls')),
 ]

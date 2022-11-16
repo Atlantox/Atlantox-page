@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'WebApp',
     'ProjectApp',
     'BriefcaseApp',
+    'AboutApp',
 ]
 
 MIDDLEWARE = [

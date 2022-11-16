@@ -37,7 +37,9 @@
             </div>
             
             <div class="col-12 py-5 col-lg-8 text-secondary-light m-0 p-0 d-flex flex-column justify-content-center align-items-center">
-                <h2 class="text-giant m-0 text-shadow-h">Ven a conocerme</h2>
+                <a class="text-decoration-none text-secondary-light" href="{% url 'About' %}">
+                    <h2 class="text-giant m-0 text-shadow-h underline-hover">Ven a conocerme</h2>
+                </a>
                 <p class="text-secondary">
                     Porque si estás aquí, seguramente tengamos algo en común.
                 </p>            
@@ -66,10 +68,10 @@
                                     <figure class="col-12">
                                         <img class="w-100" src="{{project.img.url}}" alt="{{project.name}}">
                                     </figure>
-                                    <h3 class="col-12 text-secondary-light shadow-h fs-1">
+                                    <h3 class="col-12 text-secondary-light text-shadow-h fs-1">
                                         {{project.name}}
                                     </h3>
-                                    <p class="col-12 text-secondary shadow-n fs-4">
+                                    <p class="col-12 text-secondary-light fs-4">
                                        {{project.content}}
                                     </p>
                                 </div>

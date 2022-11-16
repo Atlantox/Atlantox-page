@@ -1,0 +1,65 @@
+{% extends 'WebApp/common/base.html' %}
+{% block title %} Sobre mi {% endblock %}
+{% block subtitle %} Atlantox {% endblock %}
+
+{% block content %}
+{% load static %}
+    <div class="container-fluid text-secondary bg-secondary-dark fs-4 text-center px-0 about-body">
+        <div class="row w-100 m-0">
+            <div class="col-12 gradient-p-d-l m-0 about-container px-5 py-5 pt-0">
+                <div class="row w-100 justify-content-center align-items-center">
+                    <div class="col-12 px-1 px-md-3">
+                        <p>
+                            Soy un chico venezolano nacido en 2001 (así podrás calcular mi edad fácilmente), con una fuerte pasión por los videojuegos desde pequeño, 
+                            pésimo en habilidades sociales pero muy sobresaliente en áreas como programación, lógica y matemática, por ello mismo, tiendo a ser alguien solitario,
+                            sin embargo, cuando nadie quiere tomar las riendas de ser líder, yo me ofrezco y suelo ser muy estricto tanto con los demás como conmigo mismo.
+
+                        </p>
+                        <p>
+                            En 2019 comencé a ver cursos sobre desarrollo de videojuegos, desde allí tuve un sueño, el sueño de crear juegos con historias inolvidables 
+                            que la gente disfrute al máximo, no solo por entretenimiento, si no también por dejar la marca de que alguna vez viví en este mundo, cosa 
+                            que me gusta hacer mucho. Siempre busco dejar una huella de que yo estuve allí.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row w-100 justify-content-center align-items-center pb-3 mt-5">
+                    <div class="col-12 px-0 px-md-3 pb-5">
+                        <h2 class="text-shadow-h text-giant text-secondary-light">Mis aficiones</h2>
+                        <p>
+                            Como toda persona también tengo mis aficiones, gustos, pasiones, como quieras llamarlo, sinceramente hay muchas cosas que me gustan,
+                            sin embargo, considero que las siguientes son las más resaltables y características de mí. Seguramente también poseas alguna de ellas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row w-100 justify-content-center py-4 m-0 px-1">
+
+            {% for pleasure in pleasures %}
+                <article class="col-12 col-lg-6 px-3 my-3">
+                    <div class="w-100 shadow-deep h-100 row bg-primary-light justify-content-center m-0">
+                        <div class="col-12 text-secondary-light text-shadow-l">
+                            <h3 class="text-big m-0 my-3 mt-5 text-shadow-h">{{pleasure.name}}</h3>
+                        </div>
+
+                        <div class="col-12 row mx-5 mb-3 justify-content-center align-items-center">
+                            <div class="col-9 col-md-4">
+                                <img class="w-100 mouse-big" src="{{pleasure.img1.url}}" alt="atlantox3">
+                            </div>
+                            <div class="col-9 col-md-4">
+                                <img class="w-100 mouse-big" src="{{pleasure.img2.url}}" alt="atlantox3">
+                            </div>
+                            <div class="col-9 col-md-4">
+                                <img class="w-100 mouse-big" src="{{pleasure.img3.url}}" alt="atlantox3">
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}
