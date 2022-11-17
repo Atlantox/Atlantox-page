@@ -36,13 +36,13 @@ nav{
 }
 
 /* Gradient primary color: light to dark */
-.gradient-p-l-d{
+.gradient-p-d-l{
     background: linear-gradient(0deg, rgba(165,81,189,1) 20%, rgba(135,9,180,1) 80%);
 }
 
 /* Gradient primary color: dark to light */
-.gradient-p-d-l{
-    background: linear-gradient(-180deg, rgba(135,9,180,1) 20%, rgba(165,81,189,1)  80%);
+.gradient-p-l-d{
+    background: linear-gradient(0deg, rgba(135,9,180,1) 20%, rgba(165,81,189,1)  80%);
 }
 
 .home-hero{
@@ -211,6 +211,24 @@ nav{
 
 .angular-button{
     clip-path: polygon(100% 50%, 89% 101%, 10% 101%, 0% 50%, 10% 0%, 89% 0%);
+}
+
+.gallery-container{
+    clip-path: polygon(
+        100% 0%,
+        100% 100%,
+        90% 95%,
+        80% 100%,
+        70% 95%,
+        60% 100%,
+        50% 95%,
+        40% 100%,
+        30% 95%,
+        20% 100%,
+        10% 95%,
+        0% 100%,
+        0% 0%
+    );
 }
 
 .bg-image{

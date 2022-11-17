@@ -3,9 +3,8 @@
 {% block subtitle %} Atlantox {% endblock %}
 
 {% block content %}
-{% load static %}
-    <div class="container-fluid text-secondary bg-secondary-dark fs-4 text-center px-0 about-body">
-        <div class="row w-100 m-0">
+    <div class="container-fluid text-secondary gradient-p-d-l fs-3 text-center px-0 about-body pb-4">
+        <div class="row w-100 m-0 text-secondary-light">
             <div class="col-12 gradient-p-d-l m-0 about-container px-5 py-5 pt-0">
                 <div class="row w-100 justify-content-center align-items-center">
                     <div class="col-12 px-1 px-md-3">
@@ -38,21 +37,15 @@
         <div class="row w-100 justify-content-center py-4 m-0 px-1">
 
             {% for pleasure in pleasures %}
-                <article class="col-12 col-lg-6 px-3 my-3">
-                    <div class="w-100 shadow-deep h-100 row bg-primary-light justify-content-center m-0">
-                        <div class="col-12 text-secondary-light text-shadow-l">
-                            <h3 class="text-big m-0 my-3 mt-5 text-shadow-h">{{pleasure.name}}</h3>
+                <article class="col-12 col-md-6 px-5 my-3">
+                    <div class="w-100 shadow-deep h-100 row bg-secondary-light justify-content-center m-0 p-0">
+                        <div class="col-12 text-primary-light text-shadow-l p-0">
+                            <h3 class="text-big m-0 my-3 mt-5">{{pleasure.name}}</h3>
                         </div>
 
-                        <div class="col-12 row mx-5 mb-3 justify-content-center align-items-center">
-                            <div class="col-9 col-md-4">
-                                <img class="w-100 mouse-big" src="{{pleasure.img1.url}}" alt="atlantox3">
-                            </div>
-                            <div class="col-9 col-md-4">
-                                <img class="w-100 mouse-big" src="{{pleasure.img2.url}}" alt="atlantox3">
-                            </div>
-                            <div class="col-9 col-md-4">
-                                <img class="w-100 mouse-big" src="{{pleasure.img3.url}}" alt="atlantox3">
+                        <div class="col-12 row mx-0 mb-3 justify-content-center align-items-center p-0">
+                            <div class="col-11 col-md-9 p-0 text-center">
+                                <img class="w-100" src="{{pleasure.img.url}}" alt="{{pleasure.name}}">
                             </div>
                         </div>
 
