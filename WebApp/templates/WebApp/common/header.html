@@ -4,11 +4,11 @@
       <a class="navbar-brand" href="{% url 'Home' %}">
         <img src="{% static 'WebApp/icons/atlantox-icon.svg' %}" alt="logo" width="125px">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler animated" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="CloseCollapse()" id="navbar-button">
         <span class="navbar-toggler-icon"></span>
-      </button>
+    </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 h5 pe-3 fw-semibold fs-3">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 h5 pe-3 fw-semibold fs-3 text-center text-lg-end my-1 my-lg-0">
 
           <li class="nav-item mx-1">
             <a class="underline-hover nav-link text-secondary-light fw-normal" href="{% url 'Projects' %}">
@@ -39,7 +39,7 @@
           </li>
 
           <li class="nav-item mx-1">
-            <a class="underline-hover nav-link text-secondary-light fw-normal" href="#">
+            <a class="underline-hover nav-link text-secondary-light fw-normal" href="{% url 'Contact' %}">
               Contacto
             </a>
           </li>
@@ -47,3 +47,24 @@
       </div>
     </div>
   </nav>
+
+  <script>
+    function hasClass(element, clsName) {
+        return (' ' + element.className + ' ').indexOf(' ' + clsName + ' ') > -1;
+    }
+    
+    function CloseCollapse(){
+      btn = document.getElementById('navbar-button');
+      menu = document.getElementById('navbarSupportedContent');
+      if((hasClass(btn, 'opened'))){
+        menu.style = 'display:none';
+        btn.classList.remove('opened');
+        btn.classList.remove('arrow-up');
+      }
+      else{
+        menu.style = 'display:initial';
+        btn.classList.add('opened');
+        btn.classList.add('arrow-up');
+      }
+    }
+  </script>

@@ -1,70 +1,74 @@
 {% extends 'WebApp/common/base.html' %}
-{% block title %} Home {% endblock %}
-{% block subtitle %} ¿Cómo contactarnos? {% endblock %}
+{% block title %} Contacto {% endblock %}
+{% block subtitle %} Contáctame {% endblock %}
 
 {% load static %}
 
 {% block content %}
+    {% load static %}
+    <div class="container-fluid gradient-p-d-l text-secondary">
+        <div class="row w-100 m-0 justify-content-center text-center">
+            <p class="fs-1 text-shadow-h">
+                ¿Te interesa lo que hago?, ¿Tienes alguna propuesta, idea o pregunta para decirme? No dudes en contactarme, 
+                estaré esperando tu mensaje en:
+            </p>
+        </div>
 
-<div class="container-fluid">
-    <div class="row mt-5 align-items-center">
-        <p class="col-12 fs-4 text-center">
-            ¿Tienes alguna sugerencia, idea o propuesta? Compártelo con nosotros en cualquiera de 
-            nuestras redes sociales.
-        </p>
+        <div class="row w-100 m-0 justify-content-center">
+            <div class="col-12 row m-0 justify-content-center">
+
+                <article class="col-10 col-lg-3 row m-0 p-3 justify-content-center pb-5">
+                    <div class="row col-12 m-0 bg-secondary-light contact-container shadow-deep justify-content-center pb-5 pt-4">
+                        <a class="col-9 col-lg-12" href="https://www.youtube.com/user/atlantox">
+                            <figure class="w-100 text-center">
+                                <img class="w-75" src="{% static 'WebApp/icons/youtube.svg' %}" alt="youtube">
+                            </figure>
+                        </a>
+                        <div class="col-12 text-center fs-1 text-primary-light text-shadow-x">
+                            Atlantox
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-10 col-lg-3 row m-0 p-3 justify-content-center pb-5">
+                    <div class="row col-12 m-0 bg-secondary-light contact-container shadow-deep justify-content-center pb-5 pt-4">
+                        <a class="col-9 col-lg-12" href="https://github.com/Atlantox">
+                            <figure class="w-100 text-center">
+                                <img class="w-75" src="{% static 'WebApp/icons/github.svg' %}" alt="github">
+                            </figure>
+                        </a>
+                        <div class="col-12 text-center fs-1 text-primary-light text-shadow-x">
+                            Atlantox
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-10 col-lg-3 row m-0 p-3 justify-content-center pb-5">
+                    <div class="row col-12 m-0 bg-secondary-light contact-container shadow-deep justify-content-center pb-5 pt-4">
+                        <a class="col-9 col-lg-12" href="https://twitter.com/atlantox7">
+                            <figure class="w-100 text-center">
+                                <img class="w-75" src="{% static 'WebApp/icons/twitter.svg' %}" alt="twitter">
+                            </figure>
+                        </a>
+                        <div class="col-12 text-center fs-1 text-primary-light text-shadow-x">
+                            @Atlantox7
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-10 col-lg-3 row m-0 p-3 justify-content-center pb-5">
+                    <div class="row col-12 m-0 bg-secondary-light contact-container shadow-deep justify-content-center pb-5 pt-4">
+                        <figure class="col-9 col-lg-12 text-center">
+                            <img class="w-75" src="{% static 'WebApp/icons/mailbox.svg' %}" alt="mail">
+                        </figure>
+                        <div class="col-12 text-center fs-1 text-primary-light text-shadow-x">
+                            theatlantox7@gmail.com
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
     </div>
-
-    <div class="row my-5 justify-content-center p-5">
-
-        <div class="col-12 col-md-6 p-4 p-lg-5">
-            <div class="bg-dark row rounded p-3 shadowed my-2 my-lg-0">
-                <a class="d-flex justify-content-center align-items-center text-decoration-none" target="_blank" href="https://www.facebook.com/Campanellastudios">
-                    <img style="width:12%" src="{% static 'WebApp/icons/facebook.svg' %}" alt="facebook">
-                    <span class="fs-2 underline-hover text-black text-break">&nbsp; CampanellaStudios</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 p-4 p-lg-5">
-            <div class="bg-dark row rounded p-3 shadowed my-2 my-lg-0">
-                <a class="d-flex justify-content-center align-items-center text-decoration-none" target="_blank" href="https://www.instagram.com/campanellastudios/">
-                    <img style="width:12%" src="{% static 'WebApp/icons/instagram.svg' %}" alt="instagram">
-                    <span class="fs-2 underline-hover text-black text-break">&nbsp; campanellastudios</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 p-4 p-lg-5">
-            <div class="bg-dark row rounded p-3 shadowed my-2 my-lg-0">
-                <a class="d-flex justify-content-center align-items-center text-decoration-none" target="_blank" href="https://twitter.com/CampVStudios">
-                    <img style="width:12%" src="{% static 'WebApp/icons/twitter.svg' %}" alt="twitter">
-                    <span class="fs-2 underline-hover text-black text-break">&nbsp; @CampVStudios</span>
-              </a>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 p-4 p-lg-5">
-            <div class="bg-dark row rounded p-3 shadowed my-2 my-lg-0">
-                <a class="d-flex justify-content-center align-items-center text-decoration-none" target="_blank" href="https://www.youtube.com/channel/UC1cqElIQ3OCedNJOd41QUXA">
-                    <img style="width:12%" src="{% static 'WebApp/icons/youtube.svg' %}" alt="youtube">
-                    <span class="fs-2 underline-hover text-black text-break">&nbsp; Campanella Studios</span>
-              </a>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 p-4 p-lg-5">
-            <div class="bg-dark row rounded p-3 shadowed my-2 my-lg-0">
-                <div class="d-flex justify-content-center align-items-center text-decoration-none">
-                    <span class="fs-2 underline-hover text-black text-break">CampanellaStudios@gmail.com</span>
-                </div>
-            </div>
-        </div>
-        
-        
-          
-        
-          
-        
-          
-    </div>
-</div>
 
 {% endblock %}
