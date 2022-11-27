@@ -310,17 +310,21 @@ nav{
 
 .gallery-carousel{
     min-height:300px;
-    min-width:300px;
     max-height:300px;
-    max-width:300px;
+    min-width:600px;
+    max-width:600px;
+}
+
+.carousel-item{
+    transition:1s;
 }
 
 @media (min-width:720px) {
     .gallery-carousel{
-        min-height:500px;
-        min-width:500px;
-        max-height:500px;
-        max-width:500px;
+        min-height:600px;
+        max-height:600px;
+        min-width:900px;
+        max-width:900px;
     }   
 }
 
@@ -363,8 +367,63 @@ nav{
     animation-name:slidein;
 }
 
+.atlantox-img{
+    animation: atlantox-img 1s cubic-bezier(0.43, 1.08, 1, 1);
+}
+
+.brain-img{
+    animation: left-to-right 1.2s ease-in-out;
+}
+
+.hand-img{
+    animation: right-to-left 1.2s ease-in-out;
+}
+
+.brain-invisible{
+    transform:translateX(-100%);
+    opacity: 0;
+}
+
+.hand-invisible{
+    transform:translateX(100%);
+    opacity: 0;
+}
+
 .width-0{
     width:0%;
+}
+
+@keyframes atlantox-img{
+    0%{
+        transform:translateY(100%);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes left-to-right{
+    0%{
+        transform:translateX(-100%);
+        opacity:0;
+    }
+    100%{
+        transform:translateX(0%);
+        opacity:1;
+    }
+}
+
+@keyframes right-to-left{
+    0%{
+        transform:translateX(100%);
+        opacity:0;
+    }
+    100%{
+        transform:translateX(0%);
+        opacity:1;
+    }
 }
 
 @keyframes slidein {
