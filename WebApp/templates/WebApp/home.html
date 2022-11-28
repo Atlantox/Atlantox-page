@@ -81,12 +81,10 @@
             </div>-->
 
 
-
-
             <div class="row col-12 justify-content-center m-0 p-0">
                 <div class="col-12 p-0 gallery-carousel">
                     <div id="carouselExampleControls" class="carousel slide h-100 w-100" data-bs-ride="carousel">
-                        <div class="carousel-inner h-100">
+                        <div class="carousel-inner h-100" data-bs-interval="100">
                             {% for project in projects %}
                             {% if project.first %}
                                 <div class="carousel-item active p-5 h-100">
