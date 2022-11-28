@@ -3,7 +3,7 @@ from ProjectApp.models import Project
 from django.forms.models import model_to_dict
 
 def home(request):
-    projects = Project.objects.all().order_by('-id')[:2]
+    projects = Project.objects.all().order_by('-id')[:5]
     buffer = []
 
     for project in projects:

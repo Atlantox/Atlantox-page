@@ -94,19 +94,18 @@
                                 <div class="carousel-item p-5 h-100">
                             {% endif %}
 
-                            <div class="d-block bg-secondary p-0 shadowed my-2">
-                                <a class="text-decoration-none" href="{% url 'Project' project.id %}">
-                                    <div class="row bg-primary-light shadowed m-0 project-card p-4 shadow-inset justify-content-center">
-                                        <figure class="col-10 text-center">
-                                            <img class="w-100" src="{{project.img.url}}" alt="{{project.name}}">
-                                        </figure>
-                                        <p class="col-12 text-secondary-light fs-4">
-                                           {{project.content}}
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-
+                                <div class="d-block bg-secondary p-0 shadowed my-2">
+                                    <a class="text-decoration-none" href="{% url 'Project' project.id %}">
+                                        <div class="row bg-primary-light shadowed m-0 project-card p-4 shadow-inset justify-content-center">
+                                            <figure class="col-10 text-center">
+                                                <img class="w-100" src="{{project.img.url}}" alt="{{project.name}}">
+                                            </figure>
+                                            <p class="col-12 text-secondary-light fs-3 fs-md-4 fs-sm-5">
+                                            {{project.content}}
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
                                 
                                 </div>
                         {% endfor %}
